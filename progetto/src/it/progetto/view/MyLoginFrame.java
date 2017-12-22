@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class MyLoginFrame extends JFrame {
 
-    private JTextField txtUsername = new JTextField();
+    private JTextField txtEmail= new JTextField();
     private JPasswordField txtPassword = new JPasswordField();
 
     public MyLoginFrame() {
@@ -32,11 +32,11 @@ public class MyLoginFrame extends JFrame {
         JLabel lblPassword = new JLabel("Password");
 
         centro.add(lblUsername);
-        centro.add(txtUsername);
+        centro.add(txtEmail);
 
         centro.add(lblPassword);
         centro.add(txtPassword);
-        txtUsername.addActionListener(listener);
+        txtEmail.addActionListener(listener);
         txtPassword.addActionListener(listener);
 
 
@@ -81,8 +81,8 @@ public class MyLoginFrame extends JFrame {
 
     }
 
-    public JTextField getTxtUsername() {
-        return txtUsername;
+    public JTextField getTxtEmail() {
+        return txtEmail;
     }
 
     public JPasswordField getTxtPassword() {

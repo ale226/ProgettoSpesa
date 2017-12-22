@@ -8,7 +8,6 @@ import java.awt.*;
 public class MyRecuperaPasswordFrame extends JFrame {
 
     private JTextField txtMail = new JTextField();
-    private JPasswordField txtUser = new JPasswordField();
 
 
     public MyRecuperaPasswordFrame(){
@@ -21,14 +20,11 @@ public class MyRecuperaPasswordFrame extends JFrame {
         JPanel centro = new JPanel();
         JPanel sud = new JPanel();
         sud.setLayout(new FlowLayout());
-        centro.setLayout(new GridLayout(2,2));
+        centro.setLayout(new GridLayout(1,2));
         JLabel lblMail = new JLabel("E-Mail");
-        JLabel lblUser = new JLabel("Nome utente");
         JButton btnRecupera = new JButton("SPEDISCI LA MAIL CONTENTE LA PASSWORD");
         centro.add(lblMail);
         centro.add(txtMail);
-        centro.add(lblUser);
-        centro.add(txtUser);
         sud.add(btnRecupera);
 
 
