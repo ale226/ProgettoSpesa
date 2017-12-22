@@ -42,6 +42,7 @@ public class MyRegFrame extends JFrame {
 
 
         setSize(500,200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 }

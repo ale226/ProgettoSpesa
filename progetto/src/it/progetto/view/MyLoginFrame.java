@@ -41,7 +41,7 @@ public class MyLoginFrame extends JFrame {
 
 
         JPanel sud = new JPanel();
-        sud.setLayout(new GridLayout(3,2));
+        sud.setLayout(new GridLayout(4,2));
 
 
         sud.add(new JLabel("Effettua il Login"));
@@ -59,6 +59,13 @@ public class MyLoginFrame extends JFrame {
         sud.add(btnReg);
 
 
+        sud.add(new JLabel("Hai dimenticato la password?"));
+        JButton btnRecuperaPassword = new JButton("RECUPERA PASSWORD");
+
+        btnRecuperaPassword.addActionListener(listener);
+        sud.add(btnRecuperaPassword);
+
+
         sud.add(new JLabel("Oppure puoi accedere come ospite"));
         JButton btnGuest = new JButton("ACCEDI COME OSPITE");
         btnGuest.addActionListener(listener);
@@ -67,29 +74,6 @@ public class MyLoginFrame extends JFrame {
 
         c.add(centro, BorderLayout.CENTER);
         c.add(sud, BorderLayout.SOUTH);
-
-
-
-        MyLoginFrame this1= this;
-
-        btnReg.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                System.out.println("Evento catturato!");
-
-                if(e.getActionCommand()== "REGISTRATI"){
-                    this1.setVisible(false);
-                    MyRegFrame regFrame = new MyRegFrame();
-                    SessionManager.getInstance().getSESSION().put("finestra_registrazione", regFrame);
-
-                }
-
-            }
-        });
-
-
-
 
         setSize(500, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
