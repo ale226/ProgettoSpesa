@@ -60,7 +60,7 @@ public class LoginListener implements ActionListener{
                     Gestore gestore = (Gestore) guest;
                     JOptionPane.showMessageDialog(null,"Benvenuto gestore " + guest.getNome() + " " + guest.getCognome() + "!");
 
-                    SessionManager.getInstance().getSESSION().put("amministratore", gestore);
+                    SessionManager.getInstance().getSESSION().put("gestore", gestore);
                     new MyGestoreFrame();
                     finestra.setVisible(false);
                 }

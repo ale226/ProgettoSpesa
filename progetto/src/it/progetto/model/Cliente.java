@@ -1,12 +1,32 @@
 package it.progetto.model;
 
+import java.util.ArrayList;
+
 public class Cliente extends Guest {
-    public boolean loggato = true;
-    public String nome;
-    public String cognome;
-    public String username;
+    private boolean loggato = true;
+    private String nome;
+    private String cognome;
+    private String email;
     private byte[] password;
-    public boolean verificato;
+    private boolean verificato;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    private ArrayList<Prodotto> listaprodotti;
+
+    public ArrayList<Prodotto> getListaprodotti() {
+        return listaprodotti;
+    }
+
+    public void setListaprodotti(ArrayList<Prodotto> listaprodotti) {
+        this.listaprodotti = listaprodotti;
+    }
 
     public String getNome() {
         return nome;
@@ -40,13 +60,6 @@ public class Cliente extends Guest {
         this.loggato = loggato;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     public byte[] getPassword() {
         return password;
