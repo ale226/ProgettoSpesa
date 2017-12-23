@@ -40,11 +40,10 @@ public class LoginListener implements ActionListener{
                     System.out.println("Benvenuto clinete " + guest.getNome() + " " + guest.getCognome() + "!");
                     Cliente cliente = (Cliente) guest;
                     JOptionPane.showMessageDialog(null,"Benvenuto cliente " + guest.getNome() + " " + guest.getCognome() + "!");
-                    MyClienteFrame Catalogo = new MyClienteFrame();
-                    SessionManager.getInstance().getSESSION().put("cliente", Catalogo);
 
+                    SessionManager.getInstance().getSESSION().put("studente", cliente);
+                    new MyClienteFrame();
                     finestra.setVisible(false);
-
                 } else if (guest instanceof Amministratore) {
                     //apriremo la view dell'amministratore
                     System.out.println("Benvenuto amministratore " + guest.getNome() + " " + guest.getCognome() + "!");
@@ -86,8 +85,8 @@ public class LoginListener implements ActionListener{
 
         if (e.getActionCommand()=="ACCEDI COME OSPITE"){
             finestra.setVisible(false);
-            MyGuestFrame Catalogo= new MyGuestFrame() ;
-            SessionManager.getInstance().getSESSION().put("finestra recupero password", Catalogo);
+            MyOspiteFrame OspiteFrame = new MyOspiteFrame() ;
+            SessionManager.getInstance().getSESSION().put("finestra recupero password", OspiteFrame);
 
 
         }
